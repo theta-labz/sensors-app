@@ -300,7 +300,7 @@ export class SensorsReceiverElement extends ReactiveElement {
             const canvas = this.querySelector('.sensors-receiver__pairing-qrcode')
             if (!canvas) return
 
-            const url = new URL('/sensors/sender', location.href)
+            const url = new URL('/sender', location.href)
             url.searchParams.set('channel', this._channel)
 
             QRCode.toCanvas(canvas, url.toString(), {
